@@ -116,3 +116,9 @@
     flex-direction: column;
   }
 }
+@media print {
+  .title,
+  .printhide {
+    display: none;
+  }
+}

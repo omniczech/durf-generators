@@ -17,8 +17,8 @@ export default function Home() {
 
         <div className={styles.grid}></div>
         <Link href="/character">Characters</Link>
-        <Link href="/monsters">Monsters</Link>
-        <Link href="/items">Magical Items</Link>
+        {/* <Link href="/monsters">Monsters</Link>
+        <Link href="/items">Magical Items</Link> */}
       </main>
 
       <footer className={styles.footer}></footer>

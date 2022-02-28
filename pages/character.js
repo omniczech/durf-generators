@@ -50,13 +50,17 @@ export default function Character() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>DURF Character Generator</h1>
-
-        <div className={styles.grid}></div>
-        <Link href="/character">Characters</Link>
-        <Link href="/monsters">Monsters</Link>
-        <Link href="/items">Magical Items</Link>
-        <button onClick={reroll}>Reroll</button>
+        <div className={styles.printhide}>
+          <h1 className={styles.title}>DURF Character Generator</h1>
+          <div>
+            <Link href="/character">Characters</Link>
+            {/* <Link href="/monsters">Monsters</Link> */}
+            {/* <Link href="/items">Magical Items</Link> */}
+          </div>
+          <button onClick={reroll} className={charsheet.reroll}>
+            Reroll
+          </button>
+        </div>
 
         <div className={charsheet.charsheet} key={counter}>
           <div className={charsheet.charname}>
@@ -75,8 +79,12 @@ export default function Character() {
               <div
                 className={classNames(charsheet.charhealth, charsheet.roundtop)}
               >
-                <p>HD</p>
-                <p>Wounds</p>
+                <p>
+                  <b>HD</b>
+                </p>
+                <p>
+                  <b>Wounds</b>
+                </p>
                 <span>1</span>
                 <span></span>
               </div>
@@ -85,14 +93,32 @@ export default function Character() {
                   charsheet.chararmor,
                   charsheet.roundbottom
                 )}
-              ></div>
+              >
+                <p>
+                  Current
+                  <br />
+                  <span>0</span>
+                </p>
+                <p>
+                  Max
+                  <br />
+                  <span>0</span>
+                </p>
+                <p className={charsheet.wide}>
+                  <b>Armor</b>
+                </p>
+              </div>
               <div
                 className={classNames(
                   charsheet.charxp,
                   charsheet.roundtop,
                   charsheet.roundbottom
                 )}
-              ></div>
+              >
+                <p>
+                  <b>XP</b>
+                </p>
+              </div>
             </div>
             <div className={charsheet.charcenter}>
               <div
